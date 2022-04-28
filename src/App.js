@@ -15,7 +15,7 @@ const App = (props) => {
             const requestOptions = {
               method: 'POST',
               headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-              body: result
+              body: `${result}`
             };
             
             fetch('https://hooks.zapier.com/hooks/catch/895175/bzv9wnn/silent/', requestOptions);
