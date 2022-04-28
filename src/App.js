@@ -17,7 +17,7 @@ const App = (props) => {
               headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             };
             
-            fetch(`https://hooks.zapier.com/hooks/catch/895175/bzv9wnn/silent/?${result}`, requestOptions);
+            fetch(`https://hooks.zapier.com/hooks/catch/895175/bzv9wnn/silent/?email=${result}`, requestOptions);
           }
 
           if (!!error) {
