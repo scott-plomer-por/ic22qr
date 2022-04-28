@@ -13,7 +13,8 @@ const App = (props) => {
           if (!!result) {
             setData(result?.text);
             const requestOptions = {
-              method: 'GET',
+              method: 'POST',
+              headers: {'Content-Type': 'application/x-www-form-urlencoded'},
               body: result
             };
             
