@@ -13,8 +13,7 @@ const App = (props) => {
           if (!!result) {
             setData(result?.text);
             const requestOptions = {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
+              method: 'GET',
               body: result
             };
             
