@@ -1,10 +1,22 @@
+const App = (props) => {
+  const [data, setData] = useState('No result');
 
-function App() {
   return (
-    <div className="App">
-      Some Text
-    </div>
-  );
-}
+    <>
+      <QrReader
+        onResult={(result, error) => {
+          if (!!result) {
+            setData(result?.text);
+          }
 
+          if (!!error) {
+            console.info(error);
+          }
+        }}
+        style={{ width: '100%' }}
+      />
+      <p>{data}</p>
+    </>
+  );
+};
 export default App;
