@@ -13,12 +13,11 @@ const App = (props) => {
           if (!!result) {
             setData(result?.text);
             const requestOptions = {
-              method: 'POST',
+              method: 'GET',
               headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-              body: `${result}`
             };
             
-            fetch('https://hooks.zapier.com/hooks/catch/895175/bzv9wnn/silent/', requestOptions);
+            fetch(`https://hooks.zapier.com/hooks/catch/895175/bzv9wnn/silent/?${result}`, requestOptions);
           }
 
           if (!!error) {
