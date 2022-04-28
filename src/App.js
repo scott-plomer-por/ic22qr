@@ -1,5 +1,14 @@
+import React, { useState } from 'react';
+import { QrReader } from 'react-qr-reader';
+
 const App = (props) => {
   const [data, setData] = useState('No result');
+
+const requestOptions = {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' }
+};
+
 
   return (
     <>
@@ -7,6 +16,7 @@ const App = (props) => {
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);
+            fetch('https://hooks.zapier.com/hooks/catch/895175/bzv9wnn/silent/', requestOptions);
           }
 
           if (!!error) {
