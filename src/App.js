@@ -4,8 +4,6 @@ import { QrReader } from 'react-qr-reader';
 const App = (props) => {
   const [data, setData] = useState('No result');
 
-
-
   return (
     <>
       <QrReader
@@ -26,7 +24,7 @@ const App = (props) => {
         }}
         style={{ width: '100%' }}
       />
-      <p>{data}</p>
+      <p>Email : {data}</p>
     </>
   );
 };
