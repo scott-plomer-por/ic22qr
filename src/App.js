@@ -4,18 +4,18 @@ import { QrReader } from 'react-qr-reader';
 import "./styles/styles.css";
 
 const App = (props) => {
-  const [data, setData] = useState('No result');
+  //const [data, setData] = useState('No result');
   const [instructions, setInstructions] = useState('Please Scan QR Code');
   const [success, setSuccess] = useState(false);
 
   return (
-    <div className = {success ? 'success' : null }>
-      <h2>{instructions}</h2>
-      <p>Email : {data}</p>
+    <div className =  { `container ${success ? "success" : null}` }>
+      <h2 className='heading'>{instructions}</h2>
+      {/* <p>Email : {data}</p> */}
       <QrReader
         onResult={(result, error) => {
           if (!!result) {
-            setData(result?.text);
+            //setData(result?.text);
             setInstructions('Success!');
             setSuccess(true);
             const requestOptions = {
@@ -27,9 +27,8 @@ const App = (props) => {
           }
 
           if (!!error) {
-            console.info(error);
-            setInstructions('Please Scan QR Code');
-            setSuccess(false);
+              setInstructions('Please Scan QR Code');
+              setSuccess(false);
           }
         }}
         style={{ width: '100%' }}

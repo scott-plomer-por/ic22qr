@@ -5,8 +5,27 @@
           box-sizing: border-box;
 }
 
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .success {
   background-color: #81bd41;
   color: white;
+}
+
+.heading {
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

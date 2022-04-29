@@ -4,7 +4,19 @@
     box-sizing: border-box;
   }
 
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 .success {
     background-color: #81bd41;
     color: white;
+}
+
+.heading {
+    text-align: center;
 }
