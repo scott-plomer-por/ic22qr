@@ -15,9 +15,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  padding: 1em 0em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .success {

@@ -9,7 +9,7 @@ const App = (props) => {
   const [success, setSuccess] = useState(false);
 
   return (
-    <div className =  { `container ${success ? "success" : null}` }>
+    <div className =  { `container ${success ? "success" : ""}` }>
       <h2 className='heading'>{instructions}</h2>
       {/* <p>Email : {data}</p> */}
       <QrReader
